@@ -3,7 +3,7 @@ import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 export function TopBar() {
   return (
     <>
-      <Navbar bg="dark" data-bs-theme="dark" style={{"background": "#545454"}}>
+      <Navbar bg="light" data-bs-theme="light" style={{"background": "#48BDF0"}}>
       <Container>
         <Navbar.Toggle />
         <Nav className="me-auto">
