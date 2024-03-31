@@ -2,17 +2,24 @@ import { useEffect, useState } from "react";
 import { TextWriterProps } from "./interface";
 import { StyledH1TypingEffect } from "../styled/styled";
 
-const TextWriter = ({textList, delay, infinite} : TextWriterProps) => {
+const TextWriter = ({textList, delay, infinite, onFinalize} : TextWriterProps) => {
     const [currentText, setCurrentText] = useState('');
     const [currentIndex, setCurrentIndex] = useState(0);
     const [currentIndexArray, setCurrentIndexArray] = useState(0);
-    
+    const [finalizeTyping, setFinalizeTyping] = useState(false);    
     const handleText = () => {
      
     }
-    useEffect(() => {
-        // handleText()
 
+    useEffect(() => {
+        console.log(finalizeTyping);
+        if(finalizeTyping == true)
+            onFinalize();
+    }, [finalizeTyping]);
+
+
+
+    useEffect(() => {
         let timeout;
 
         if((textList != undefined && textList.length > 0) && currentIndexArray < textList.length){
@@ -33,6 +40,7 @@ const TextWriter = ({textList, delay, infinite} : TextWriterProps) => {
             }, 100)
         } else {
             setCurrentText('Terminou');
+            setFinalizeTyping(finalizeTyping => !finalizeTyping);
         }
 
         return clearTimeout(timeout);
@@ -41,7 +49,7 @@ const TextWriter = ({textList, delay, infinite} : TextWriterProps) => {
 
     return (
         <StyledH1TypingEffect>
-            {currentText ?? (<h1>Terminou...</h1>)}
+            {currentText ?? (<h1> </h1>)}
         </StyledH1TypingEffect>
     );
 }
