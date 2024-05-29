@@ -1,21 +1,17 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { CustomBannerDiv, StyledH1TypingEffect } from "./styled/styled";
+import { CustomBannerDiv, CustomSubTitle, StyledH1TypingEffect } from "./styled/styled";
 import { useEffect, useState } from "react";
 import TextWriter from "./TextWriter";
-import AnimationPhoto from "../AnimationPhoto";
 
 const Banner = () => {
 
   const [textTyping, setTextTyping] = useState(true);
   const textosBanner = [
-    "Olá pessoas meu nome é Alexsander",
-    "Sejam bem-vindas ao meu portifólio"
+    "Desenvolvedor",
+    "Músico",
   ]
 
   useEffect(() => {
-
-    console.log(textTyping);
-    console.log("mudou aqui ó")
   },[textTyping])
 
   const handleFinalize = () => {
@@ -23,25 +19,52 @@ const Banner = () => {
     setTextTyping(() => false);
   }
 
-  if(textTyping == true){
-    return (
-      <CustomBannerDiv>
-       <TextWriter
-        delay={50}
-        textList={textosBanner}
-        infinite={true}
-        onFinalize={handleFinalize}
-       />
-      </CustomBannerDiv>
-    );
-  }
-  else{
-    return (
-      <CustomBannerDiv>
-        <AnimationPhoto/>
-      </CustomBannerDiv>
-    );
-  }
+  // if(textTyping == true){
+  //   return (
+  //     <CustomBannerDiv>
+  //       {/* {saudacao()} */}
+  //      <TextWriter
+  //       delay={50}
+  //       textList={textosBanner}
+  //       infinite={true}
+  //       onFinalize={handleFinalize}
+  //      />
+  //     </CustomBannerDiv>
+  //   );
+  // }
+  // else{
+  //   return (
+  //     <CustomBannerDiv>
+  //       {/* {saudacao()} */}
+  //       {/* <AnimationPhoto/> */}
+  //     </CustomBannerDiv>
+  //   );
+  // }
+
+  return (
+    <>
+    <CustomBannerDiv>
+      <Container>
+        <Row>
+          <Col>
+          <CustomSubTitle>
+              <div><p>Olá, eu sou Alexsander.</p></div>
+              {/* <TextWriter
+                delay={50}
+                textList={textosBanner}
+                infinite={true}
+                onFinalize={handleFinalize}
+              /> */}
+            </CustomSubTitle>
+          </Col>
+         
+        </Row>
+      </Container>
+      
+    </CustomBannerDiv>
+      
+    </>
+  )
  
 };
 

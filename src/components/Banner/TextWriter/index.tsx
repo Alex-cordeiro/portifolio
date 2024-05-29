@@ -12,11 +12,9 @@ const TextWriter = ({textList, delay, infinite, onFinalize} : TextWriterProps) =
     }
 
     useEffect(() => {
-        console.log(finalizeTyping);
         if(finalizeTyping == true)
             onFinalize();
     }, [finalizeTyping]);
-
 
 
     useEffect(() => {
@@ -39,8 +37,9 @@ const TextWriter = ({textList, delay, infinite, onFinalize} : TextWriterProps) =
                 }
             }, 100)
         } else {
-            setCurrentText('Terminou');
-            setFinalizeTyping(finalizeTyping => !finalizeTyping);
+            // setCurrentText('Terminou');
+            // setFinalizeTyping(finalizeTyping => !finalizeTyping);
+            setCurrentIndexArray(0);
         }
 
         return clearTimeout(timeout);

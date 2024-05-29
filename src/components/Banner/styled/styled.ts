@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 
 export const CustomBannerDiv = styled.div`
-    background: url("/src/assets/banner.png");
+    background: url("/src/assets/banner2.png");
     background-repeat: no-repeat, no-repeat;
     background-size: cover;
     /* max-width: 1080px; */
-    max-height: 520px;
-    min-height: 300px;
+    max-height: 600px;
+    min-height: 500px;
     width: 100%;
     background-color: pink;
     height: auto;
@@ -15,6 +15,8 @@ export const CustomBannerDiv = styled.div`
     align-items: center;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    font-size: 60px;
     
 `
 export const StyledH1TypingEffect =  styled.h1`
@@ -29,3 +31,10 @@ export const StyledH1TypingEffect =  styled.h1`
 
     color: white;
 `;
+
+
+export const CustomSubTitle = styled.div`
+
+    color: #fff;
+    padding: 10px;
+`

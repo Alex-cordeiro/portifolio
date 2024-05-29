@@ -28,3 +28,7 @@ export const CustomImgRotate = styled.img`
     animation: ${RotateY} 5s;
 `;
 
+export const CustomImgAppear = styled.img`
+    animation: ${FadeIn} 5s;
+`;
+
