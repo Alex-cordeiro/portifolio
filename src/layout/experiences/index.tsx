@@ -1,40 +1,27 @@
 import { Col, Container, Row } from "react-bootstrap";
 import ExperienceItem from "../../components/informationCard";
-import StackContainer from "../../components/StackContainer";
 
 const Experiences = () => {
 
     const experienciasProfissionais = [
         {
-            "titulo": "Telemetrix Intelligence LTDA",
-            "periodo": "Junho de 2022 à Junho de 2023",
-            "cargo": "Desenvolvedor FullStack Júnior",
+            "titulo": "Gateware Group",
+            "periodo": "Fevereiro de 2023 - atualmente",
+            "cargo": "Desenvolvedor FullStack Pleno",
             "atribuicoes": [
-                    "Manutenção de sistemas legados utilizando ASP.NET WebForms e desenvolvimento de novas ferramentas com .NET Core e frameworks JavaScript como React e Angular",
-                    "Integração com APIs de terceiros, como Correios e plataformas de notas fiscais eletrônicas.",
-                    "Colaboração em projetos de migração de tecnologia para melhorar a escalabilidade e eficiência"
+                    "Desenvolvimento de novas soluções de back e frontend",
+                    "Auxilio à desenvolvedores do time.",
+                    "Automações e melhorias de ferramentas internas",
+                    
             ],
             "tecnologias": [
-                "react",
                 "dotnetcore",
                 "microsoftsqlserver",
                 "azuredevops",
+                "docker",
+                "fastapi",
+                "javascript",
                 "angular"
-            ]
-        },
-        {
-            "titulo": "Houseasy Automação Residencial",
-            "periodo": "Julho de 2023 à Setembro de 2023",
-            "cargo": "Desenvolvedor Backend Pleno",
-            "atribuicoes": [
-                    "Desenvolvimento de sistemas backend, incluindo Web APIs e integração com ERPs de clientes e parceiros.",
-                    "Utilização do protocolo MQTT para comunicação entre backend e dispositivos embarcados.",
-                    "Contribuição para a melhoria e otimização de processos internos participando das tomadas de decisões a respeito da arquitetura e metodologias utilizadas nos sistemas.",
-            ],
-            "tecnologias": [
-                "dotnetcore",
-                "microsoftsqlserver",
-                "azuredevops"
             ]
         },
         {
@@ -59,23 +46,50 @@ const Experiences = () => {
                 "javascript",
                 "angular"
             ]
-        }
+        },
+        {
+            "titulo": "Houseasy Automação Residencial",
+            "periodo": "Julho de 2023 à Setembro de 2023",
+            "cargo": "Desenvolvedor Backend Pleno",
+            "atribuicoes": [
+                    "Desenvolvimento de sistemas backend, incluindo Web APIs e integração com ERPs de clientes e parceiros.",
+                    "Utilização do protocolo MQTT para comunicação entre backend e dispositivos embarcados.",
+                    "Contribuição para a melhoria e otimização de processos internos participando das tomadas de decisões a respeito da arquitetura e metodologias utilizadas nos sistemas.",
+            ],
+            "tecnologias": [
+                "dotnetcore",
+                "microsoftsqlserver",
+                "azuredevops"
+            ]
+        },
+        
 
     ]
 
+    const experienciaEducacional = [
+        {
+            "organizacao": "Centro Universitário Unicuritiba",
+            "periodo": "Outubro de 2019 à Dezembro de 2021",
+            "titulo": "Tecnologia em Análise e Desenvolvimento de Sistemas",
+        }
+    ]
 
     return (
-        <Container style={{padding: "50px", backgroundColor: "#252525"}}>
+        <Container style={{padding: "50px", backgroundColor: "#252525"}} id="experiences">
             <Row>
-                <h1 style={{color: "#fff"}}>Experiências Profissionais</h1>
+                <Col>
+                    <h1 style={{color: "#fff"}}>Experiências Profissionais</h1>
+                </Col>
+                <Col>
+                    <h1 style={{color: "#fff"}}>Formação Acadêmica</h1>
+                </Col>
+                
             </Row>
             <hr style={{backgroundColor: "#fff", height: "3px", borderRadius: "20px"}}/>
-           
-                {experienciasProfissionais.map((item, index) => (
                     <>
                          <Row >
                             <Col xs={6} md={6}>
-
+                                {experienciasProfissionais.map((item, index) => (
                                         <ExperienceItem
                                             title={item.titulo}
                                             atribuicoes={item.atribuicoes}
@@ -83,29 +97,27 @@ const Experiences = () => {
                                             titleColor="#48BDF0"
                                             borderColor="#252525"
                                             textColor="#fff"
-                                            subtitle={item.periodo}
+                                            subtitle={`Periodo: ${item.periodo}`}
                                             subtitleColor="#fff"
+                                            subtitleOptional={`Cargo: ${item.cargo}`}
                                         />
+                                ))}
                             </Col>
                             
                              <Col xs={6} md={6}>
-                                {item.tecnologias.map((stack, stackIndex) => (
-                                    <>
-                                        <StackContainer
-                                            imageAlt={stack}
-                                            imageName={stack}
-                                            key={stackIndex}
-                                        />
-                                    </>
+                                {experienciaEducacional.map((item, index) => (
+                                    <ExperienceItem
+                                        title={item.organizacao}
+                                        subtitle={`Período: ${item.periodo}`}
+                                        atribuicoes={[`Curso: ${item.titulo}`]}
+                                        titleColor="#48BDF0"
+                                        borderColor="#252525"
+                                        subtitleColor="#fff"
+                                    />
                                 ))}
                              </Col> 
                         </Row>
                     </>
-                ))}
-              
-             
-
-               
         </Container>
     )
 }

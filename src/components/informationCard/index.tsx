@@ -10,6 +10,8 @@ interface InformationCardProps {
     textColor?: string;
     subtitle?: string;
     subtitleColor?: string;
+    subtitleOptional?: string;
+    subtitleOptionalColor?: string;
 }
 const InformationCard = (
                             {
@@ -21,7 +23,9 @@ const InformationCard = (
                                 atribuicoes, 
                                 textColor,
                                 subtitle, 
-                                subtitleColor
+                                subtitleColor,
+                                subtitleOptional,
+                                subtitleOptionalColor
                             }: InformationCardProps) => {
 
     return (
@@ -36,6 +40,15 @@ const InformationCard = (
                 <>
                     <div style={{display: "flex", padding: "5px", width: "100%", height:"auto", color: `${subtitleColor}`}}>
                         <b>{subtitle}</b>
+                    </div>
+                </> : 
+                <></>
+            }
+
+            {subtitleOptional != undefined || subtitleOptional != null ? 
+                <>
+                    <div style={{display: "flex", padding: "5px", width: "100%", height:"auto", color: `${subtitleColor}`}}>
+                        <b>{subtitleOptional}</b>
                     </div>
                 </> : 
                 <></>

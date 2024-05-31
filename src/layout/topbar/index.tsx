@@ -11,13 +11,11 @@ export function TopBar() {
     
     if(scrollPosition > 0){
       setHasRoll(() => true);
-      console.log("mudei aqui")
-      console.log(hasRoll);
+     
     }
     else{
       setHasRoll(() => false);
-      console.log("voltou")
-      console.log(hasRoll);
+    
     }
       
   }
@@ -42,9 +40,9 @@ export function TopBar() {
               style={{"width": "150px", "height": "50px" }}/>
           </Navbar.Brand>
           <Nav className="justify-content-end">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#features">Features</Nav.Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
+              <Nav.Link href="#about">Sobre Mim</Nav.Link>
+              <Nav.Link href="#stacks">Stacks</Nav.Link>
+              <Nav.Link href="#experiences">Experiências Profissionais</Nav.Link>
           </Nav>
         </Container>
     </CustomNavBar>

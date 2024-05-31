@@ -12,7 +12,7 @@ export const DivPhotoBackground = styled.div`
     // background: linear-gradient(to bottom, #020247 0%, #1bace2 34.48%, #081ea2 100%)
     border-radius: 100%; 
     background: linear-gradient(to left, #020247 0%, #1bace2 34.48%, #081ea2 100%);
-    width: 300px;
+    width: 200px;
     display: flex;
-    height: 300px;
+    height: 200px;
 `

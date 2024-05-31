@@ -9,7 +9,7 @@ export const CustomBannerDiv = styled.div`
     max-height: 600px;
     min-height: 500px;
     width: 100%;
-    background-color: pink;
+    
     height: auto;
     padding: 10px;
     align-items: center;
