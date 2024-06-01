@@ -20,12 +20,10 @@ const InformationCard = (
                                 backgroundColor,
                                 title, 
                                 titleColor, 
-                                atribuicoes, 
-                                textColor,
+                                atribuicoes,
                                 subtitle, 
                                 subtitleColor,
                                 subtitleOptional,
-                                subtitleOptionalColor
                             }: InformationCardProps) => {
 
     return (

@@ -1,6 +1,4 @@
 import { Col, Container, Row } from "react-bootstrap"
-import { DivTimeLineContainer } from "./styled"
-import TimeLineItem from "../../components/timeLineItem"
 import TimeLineWrapper from "../../components/timeLineWrapper"
 
 const TimeLine = () => {

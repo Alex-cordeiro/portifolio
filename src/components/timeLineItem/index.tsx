@@ -1,4 +1,3 @@
-import { Popover } from "react-bootstrap";
 import { ContainerItem } from "./styled"
 
 interface ITimeLineItemProps {
@@ -11,7 +10,7 @@ interface ITimeLineItemProps {
 
 const 
 
-TimeLineItem = ({title, resume, logo, year, sideAlign} : ITimeLineItemProps) => {
+TimeLineItem = ({title, resume, year, sideAlign} : ITimeLineItemProps) => {
     return (
 
         <ContainerItem
@@ -23,7 +22,6 @@ TimeLineItem = ({title, resume, logo, year, sideAlign} : ITimeLineItemProps) => 
                     {resume}
                 </p>
             </div>
-            {/* after */}
         </ContainerItem>   
     );
 };

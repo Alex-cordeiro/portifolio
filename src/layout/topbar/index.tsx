@@ -1,6 +1,7 @@
-import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { CustomNavBar } from "./styled";
 import { useEffect, useState } from "react";
+import LogoTopBar from "../../assets/logo_topbar.png"
 
 export function TopBar() {
   const [hasRoll, setHasRoll] = useState(false);
@@ -35,7 +36,7 @@ export function TopBar() {
           <Navbar.Toggle />
           <Navbar.Brand href="#home">
             <img 
-              src="/src/assets/logo_topbar.png"
+              src={LogoTopBar}
               alt="Alexsander"
               style={{"width": "150px", "height": "50px" }}/>
           </Navbar.Brand>

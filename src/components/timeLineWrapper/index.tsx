@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { ITimeLineItem } from "../../types/timeline-item.interface";
 import { Col, Container, Row } from "react-bootstrap";
 import TimeLineItem from "../timeLineItem";

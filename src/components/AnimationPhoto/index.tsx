@@ -1,4 +1,4 @@
-import { CustomDivImage, CustomImgAppear, CustomImgRotate } from "./styles"
+import { CustomDivImage, CustomImgAppear } from "./styles"
 import imagem from "../../assets/animatedBanner.png";
 
 const AnimationPhoto = () => {

@@ -1,14 +1,16 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { CustomBannerDiv, CustomSubTitle, StyledH1TypingEffect } from "./styled/styled";
-import { useEffect, useState } from "react";
+import { CustomBannerDiv, CustomSubTitle } from "./styled/styled";
+import BannerBackground from "../../assets/banner2.png"
 
 const Banner = () => {
-  const [init, setInit] = useState(false);
-  
   
   return (
     <>
-      <CustomBannerDiv>
+      <CustomBannerDiv style={{
+                                backgroundImage: `url(${BannerBackground})`, 
+                                backgroundRepeat: "no-repeat, no-repeat",
+                                backgroundSize: "cover"
+                              }}>
         <Container>
           <Row>
             <Col>

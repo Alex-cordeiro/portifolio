@@ -6,10 +6,7 @@ const TextWriter = ({textList, delay, infinite, onFinalize} : TextWriterProps) =
     const [currentText, setCurrentText] = useState('');
     const [currentIndex, setCurrentIndex] = useState(0);
     const [currentIndexArray, setCurrentIndexArray] = useState(0);
-    const [finalizeTyping, setFinalizeTyping] = useState(false);    
-    const handleText = () => {
-     
-    }
+    const [finalizeTyping] = useState(false);    
 
     useEffect(() => {
         if(finalizeTyping == true)
@@ -37,8 +34,6 @@ const TextWriter = ({textList, delay, infinite, onFinalize} : TextWriterProps) =
                 }
             }, 100)
         } else {
-            // setCurrentText('Terminou');
-            // setFinalizeTyping(finalizeTyping => !finalizeTyping);
             setCurrentIndexArray(0);
         }
 

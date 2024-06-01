@@ -89,7 +89,7 @@ const Experiences = () => {
                     <>
                          <Row >
                             <Col xs={6} md={6}>
-                                {experienciasProfissionais.map((item, index) => (
+                                {experienciasProfissionais.map((item) => (
                                         <ExperienceItem
                                             title={item.titulo}
                                             atribuicoes={item.atribuicoes}
@@ -105,7 +105,7 @@ const Experiences = () => {
                             </Col>
                             
                              <Col xs={6} md={6}>
-                                {experienciaEducacional.map((item, index) => (
+                                {experienciaEducacional.map((item) => (
                                     <ExperienceItem
                                         title={item.organizacao}
                                         subtitle={`Período: ${item.periodo}`}
