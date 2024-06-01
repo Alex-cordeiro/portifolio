@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 
 export const CustomBannerDiv = styled.div`
-    background: url("/src/assets/banner2.png");
     background-repeat: no-repeat, no-repeat;
     background-size: cover;
     /* max-width: 1080px; */
