@@ -1,4 +1,4 @@
-import { Navbar } from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
 import styled from "styled-components";
 
 
@@ -18,3 +18,10 @@ export const CustomNavBar = styled(Navbar)<{ $hasTransparency? : boolean;}>`
     height: ${props => props.$hasTransparency ? "50px" : "70px" }
     transition: top 0.3s;
 `
+
+export const CustomNavLink = styled(Nav.Link)`
+    color: #fff;
+    &:hover {
+        color: #A9A9A9;
+    }
+`;

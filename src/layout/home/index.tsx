@@ -7,7 +7,7 @@ import Stacks from "@components/stacks"
 const Home = () => {
 
     return (
-        <Container fluid>
+        <Container fluid style={{scrollBehavior: "smooth"}}>
             <Row>
                 <Banner/>
                 <About/>

@@ -77,47 +77,41 @@ const Experiences = () => {
     return (
         <Container style={{padding: "50px", backgroundColor: "#252525"}} id="experiences">
             <Row>
-                <Col>
-                    <h1 style={{color: "#fff"}}>Experiências Profissionais</h1>
+                <Col xs md sm>
+                    <h1 style={{ color: "#fff" }}>Experiências Profissionais</h1>
+                    <hr style={{ backgroundColor: "#fff", height: "3px", borderRadius: "20px" }} />
+
+                    {experienciasProfissionais.map((item) => (
+                        <ExperienceItem
+                            title={item.titulo}
+                            atribuicoes={item.atribuicoes}
+                            backgroundColor="#252525"
+                            titleColor="#48BDF0"
+                            borderColor="#252525"
+                            textColor="#fff"
+                            subtitle={`Periodo: ${item.periodo}`}
+                            subtitleColor="#fff"
+                            subtitleOptional={`Cargo: ${item.cargo}`}
+                        />
+                    ))}
                 </Col>
-                <Col>
-                    <h1 style={{color: "#fff"}}>Formação Acadêmica</h1>
+
+                <Col xs md sm>
+                    <h1 style={{ color: "#fff" }}>Formação Acadêmica</h1>
+                    <hr style={{ backgroundColor: "#fff", height: "3px", borderRadius: "20px" }} />
+
+                    {experienciaEducacional.map((item) => (
+                        <ExperienceItem
+                            title={item.organizacao}
+                            subtitle={`Período: ${item.periodo}`}
+                            atribuicoes={[`Curso: ${item.titulo}`]}
+                            titleColor="#48BDF0"
+                            borderColor="#252525"
+                            subtitleColor="#fff"
+                        />
+                    ))}
                 </Col>
-                
             </Row>
-            <hr style={{backgroundColor: "#fff", height: "3px", borderRadius: "20px"}}/>
-                    <>
-                         <Row >
-                            <Col xs={6} md={6}>
-                                {experienciasProfissionais.map((item) => (
-                                        <ExperienceItem
-                                            title={item.titulo}
-                                            atribuicoes={item.atribuicoes}
-                                            backgroundColor="#252525"
-                                            titleColor="#48BDF0"
-                                            borderColor="#252525"
-                                            textColor="#fff"
-                                            subtitle={`Periodo: ${item.periodo}`}
-                                            subtitleColor="#fff"
-                                            subtitleOptional={`Cargo: ${item.cargo}`}
-                                        />
-                                ))}
-                            </Col>
-                            
-                             <Col xs={6} md={6}>
-                                {experienciaEducacional.map((item) => (
-                                    <ExperienceItem
-                                        title={item.organizacao}
-                                        subtitle={`Período: ${item.periodo}`}
-                                        atribuicoes={[`Curso: ${item.titulo}`]}
-                                        titleColor="#48BDF0"
-                                        borderColor="#252525"
-                                        subtitleColor="#fff"
-                                    />
-                                ))}
-                             </Col> 
-                        </Row>
-                    </>
         </Container>
     )
 }

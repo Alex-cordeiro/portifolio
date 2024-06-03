@@ -1,5 +1,5 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { CustomNavBar } from "./styled";
+import { CustomNavBar, CustomNavLink } from "./styled";
 import { useEffect, useState } from "react";
 import LogoTopBar from "../../assets/logo_topbar.png"
 
@@ -31,20 +31,25 @@ export function TopBar() {
 
   return (
     <>
-      <CustomNavBar data-bs-theme="dark" $hasTransparency={hasRoll}>
+      <CustomNavBar data-bs-theme="dark" $hasTransparency={hasRoll} expand="lg" style={{display: "flex", flexDirection: "row"}}>
         <Container>
-          <Navbar.Toggle />
           <Navbar.Brand href="#home">
             <img 
               src={LogoTopBar}
               alt="Alexsander"
               style={{"width": "150px", "height": "50px" }}/>
           </Navbar.Brand>
-          <Nav className="justify-content-end">
-              <Nav.Link href="#about">Sobre Mim</Nav.Link>
-              <Nav.Link href="#stacks">Stacks</Nav.Link>
-              <Nav.Link href="#experiences">Experiências Profissionais</Nav.Link>
-          </Nav>
+          <Navbar.Toggle aria-controls="topbar-nav" />
+          </Container>
+          <Container>
+          
+          <Navbar.Collapse id="topbar-nav">
+            <Nav className="justify-content-end">
+                <CustomNavLink href="#about">Sobre Mim</CustomNavLink>
+                <CustomNavLink href="#stacks">Stacks</CustomNavLink>
+                <CustomNavLink href="#experiences">Experiências Profissionais</CustomNavLink>
+            </Nav>  
+          </Navbar.Collapse>
         </Container>
     </CustomNavBar>
     </>

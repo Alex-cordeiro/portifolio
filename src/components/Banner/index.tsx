@@ -6,11 +6,13 @@ const Banner = () => {
   
   return (
     <>
-      <CustomBannerDiv style={{
-                                backgroundImage: `url(${BannerBackground})`, 
-                                backgroundRepeat: "no-repeat, no-repeat",
-                                backgroundSize: "cover"
-                              }}>
+      <CustomBannerDiv 
+        style={{
+                  backgroundImage: `url(${BannerBackground})`, 
+                  backgroundRepeat: "no-repeat, no-repeat",
+                  backgroundSize: "cover"
+              }}
+        id="home" >
         <Container>
           <Row>
             <Col>
